@@ -1,0 +1,7 @@
+@import "../../styles/mixins";
+
+button {
+  @include test;
+  background: blue;
+  color: green;
+}
