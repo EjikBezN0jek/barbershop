@@ -1,7 +1,15 @@
 @import "../../styles/mixins";
 
-button {
-  @include test;
-  background: blue;
-  color: green;
+.button {
+  border: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
 }

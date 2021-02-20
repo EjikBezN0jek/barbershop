@@ -1,0 +1,53 @@
+@import "../../styles/mixins";
+
+.nav {
+  background: $secondary-color;
+  position: relative;
+  width: 100%;
+}
+
+.menu-item {
+  @include title;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  display: block;
+  text-align: left;
+  padding: 16px 21px;
+  cursor: pointer;
+
+  &:not(:first-child) {
+    border-top: 1px solid $secondary-dark-color;
+  }
+}
+
+.burger {
+  position: absolute;
+  border: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 17px;
+  background-color: $secondary-dark-color;
+  background-image: url("../../icons/icon-menu.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 50px;
+  right: 0;
+  top: 0;
+
+  @include tablet {
+    display: none;
+  }
+}
+.login {
+  background: $secondary-dark-color;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.login__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 13px;
+}

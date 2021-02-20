@@ -1,4 +1,76 @@
-body {
-  color: red;
+@import "fonts";
+@import "mixins";
 
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'PTSans', sans-serif;
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 0 20px;
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+
+  @include desktop {
+    max-width: 1250px;
+    padding: 0 15px;
+  }
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }

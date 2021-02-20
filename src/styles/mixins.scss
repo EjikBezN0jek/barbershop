@@ -1,3 +1,29 @@
-@mixin test {
-  font-size: 48px;
+@import "./variables";
+
+@mixin narrow {
+  font-family: 'PTSans',sans-serif;
+}
+
+@mixin title {
+  @include narrow;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-width){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-width){
+    @content;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
