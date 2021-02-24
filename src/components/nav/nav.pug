@@ -1,7 +1,10 @@
 mixin nav()
   nav.nav
-    each item in [{label: 'Главная', link: 'index.html'}, {label: 'Наши работы', link: 'portfolio.html'}, {label: 'Записаться', link: 'order.html'}, {label: 'Контакты', link: 'contacts.html'}, {label: 'HTML Academy', link: '#'}]
-      a.menu-item.link(href=item.link)= item.label
+    a.menu-item.link.menu-item--active(href='index.html') Главная
+    a.menu-item.link(href='portfolio.html') Наши работы
+    a.menu-item.link(href='order.html') Записаться
+    a.menu-item.link(href='contacts.html') Контакты
+    a.menu-item.link(href='#') HTML Academy
     a.menu-item.login.link(href="#")
       img.login__icon(src="icons/login.png")
       span Войти

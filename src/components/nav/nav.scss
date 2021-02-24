@@ -4,6 +4,17 @@
   background: $secondary-color;
   position: relative;
   width: 100%;
+
+  &--open {
+    .menu-item {
+      display: block;
+
+      &--active {
+        text-align: left;
+        display: block;
+      }
+    }
+  }
 }
 
 .menu-item {
@@ -11,13 +22,18 @@
   height: 50px;
   color: white;
   font-size: 18px;
-  display: block;
+  display: none;
   text-align: left;
   padding: 16px 21px;
   cursor: pointer;
 
   &:not(:first-child) {
     border-top: 1px solid $secondary-dark-color;
+  }
+
+  &--active {
+    text-align: center;
+    display: block;
   }
 }
 
@@ -35,11 +51,27 @@
   height: 50px;
   right: 0;
   top: 0;
+  cursor: pointer;
+
+  &:focus{
+    outline: none;
+  }
 
   @include tablet {
     display: none;
   }
+
+  &--close {
+    padding: 13px 22px;
+    background-image: url("../../icons/icon-cross.png");
+
+    &:focus{
+      outline: none;
+    }
+  }
 }
+
+
 .login {
   background: $secondary-dark-color;
   text-transform: none;

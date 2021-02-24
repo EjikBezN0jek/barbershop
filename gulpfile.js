@@ -42,7 +42,8 @@ function styleTask() {
 }
 
 function jsTask() {
-    return gulp.src("src/js/script.js")
+    return gulp.src("src/**/**/*.js")
+        .pipe(concat('script.js'))
         .pipe(gulp.dest("build/js"))
         .pipe(babel({presets: ['@babel/env']}))
         .pipe(jsMinify())
@@ -93,5 +94,5 @@ exports.serve = serveTask;
 exports.build = gulp.series(
     cleanTask,
     copyTask,
-    gulp.parallel(pugTask, styleTask, imageTask)
+    gulp.parallel(pugTask, styleTask, jsTask, imageTask)
 );
