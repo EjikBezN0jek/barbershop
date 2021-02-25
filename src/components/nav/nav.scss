@@ -15,7 +15,20 @@
       }
     }
   }
+
+  @include tablet {
+    background: none;
+    @include flex;
+    align-items: flex-start;
+    padding: 29px 30px 0;
+  }
+
+  @include desktop {
+    padding: 29px 15px 0;
+  }
 }
+
+
 
 .menu-item {
   @include title;
@@ -34,6 +47,22 @@
   &--active {
     text-align: center;
     display: block;
+  }
+
+  @include tablet {
+    display: block;
+    font-size: 19px;
+    height: 19px;
+    padding: 0;
+
+    &:not(:first-child) {
+      border-top: none;
+    }
+
+    &--active {
+      padding-bottom: 43px;
+      border-bottom: 3px solid $secondary-color;
+    }
   }
 }
 
@@ -76,10 +105,33 @@
   background: $secondary-dark-color;
   text-transform: none;
   font-weight: normal;
+
+  @include tablet {
+    span {
+      display: none;
+    }
+    background: none;
+  }
+
+  @include desktop {
+    span {
+      display: inline;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .login__icon {
   width: 16px;
   height: 16px;
   margin-right: 13px;
+
+  @include tablet {
+    margin-right: 0;
+  }
+
+  @include desktop {
+    margin-right: 19px;
+  }
 }

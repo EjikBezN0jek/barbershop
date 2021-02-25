@@ -1,17 +1,73 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-.header__container{
+.header {
+  position: relative;
+
+
+  @include tablet {
+    background: url("../../img/back-tablet.png") center center no-repeat;
+    height: 469px;
+
+    &:before {
+     content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      height: 72px;
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    background: url("../../img/back-desktop.png")center center no-repeat;
+    height: 720px;
+  }
+}
+
+.header__container {
   padding: 0;
   background: $dark-bg;
+
+  @include tablet {
+    background: none;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
+
 
 .logotype {
   display: block;
   padding: 26px 47px;
+
+  @include tablet {
+    padding-top: 38px;
+  }
+
+  @include desktop {
+    padding-top: 55px;
+  }
+
 }
 
 .logo {
-  margin: 0 auto;
+  display: block;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 370px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    height: 153px;
+  }
 }
 
