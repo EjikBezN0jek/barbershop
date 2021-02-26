@@ -1,0 +1,26 @@
+
+mixin footer()
+  footer.footer
+    .container.footer__container
+      .info
+        p.barbershop-name.secondary-text Барбершоп Бородинский
+        p.address.secondary-text г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+        p.phone.secondary-text +7 (812) 555-66-66
+      .socials
+        p.socials__text.secondary-text Давайте дружить!
+        .socials__block
+          a.socials__link.link(href="#")
+            picture.socials__img
+              source(media='(min-width: 1250px)', srcset='icons/vk-small.png')
+              img.vk(src="icons/vk-big.png" alt="vk")
+          a.socials__link.link(href="#")
+            picture.socials__img
+              source(media='(min-width: 1250px)', srcset='icons/facebook-small.png')
+              img.fb(src="icons/facebook-big.png" alt="facebook")
+          a.socials__link.link(href="#")
+            picture.socials__img
+              source(media='(min-width: 1250px)', srcset='icons/insta-small.png')
+              img.inst(src="icons/insta-big.png" alt="instagramm")
+      .copyright
+        p.copyright__text.secondary-text Разработано:
+        a.copyright__link.secondary-text.link(href="#") HTML ACADEMY

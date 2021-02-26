@@ -1,0 +1,197 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+
+.footer {
+
+  &:before {
+    content: "";
+    display: block;
+    background: url("../../icons/section-corner--secondary-color.svg")0/100% 100% no-repeat;
+    width: 100%;
+    height: 34px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.footer__container {
+  background: $dark-bg;
+  padding-bottom: 24px;
+
+  @include tablet {
+    @include flex;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+  }
+
+  @include desktop {
+    padding-top: 53px;
+  }
+}
+
+.info {
+  padding: 39px 0 0;
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+    width: 50%;
+  }
+
+  @include desktop {
+    padding: 0;
+    width: 321px;
+  }
+}
+
+.barbershop-name {
+  font-weight: bold;
+
+  @include tablet {
+    text-transform: uppercase;
+  }
+}
+
+.address {
+  padding: 20px 0 22px;
+  line-height: 27px;
+
+  @include tablet {
+    padding: 20px 0 10px;
+  }
+}
+
+.phone {
+  font-weight: bold;
+  padding: 18px;
+  width: 100%;
+  @include decor-line;
+
+  @include tablet {
+    border: none;
+    font-weight: normal;
+    padding: 0;
+  }
+}
+
+.socials {
+
+  @include tablet{
+    order: 1;
+    width: 100%;
+  }
+
+  @include desktop {
+    order: 0;
+    width: 165px;
+  }
+}
+
+.socials__block {
+  @include decor-line;
+  margin-top: 26px;
+  @include flex;
+
+  @include tablet {
+    margin-top: 50px;
+  }
+
+  @include desktop {
+    border: none;
+    margin-top: 15px;
+  }
+}
+
+.socials__text {
+  display: none;
+  text-align: center;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.socials__link {
+  width: 100%;
+  height: 100px;
+
+  &:not(:last-child){
+    border-right: 1px solid $decor-line-color;
+  }
+
+  @include desktop {
+    &:not(:last-child){
+      border-right: none;
+    }
+
+    height: 50px;
+  }
+}
+
+.vk {
+  display: block;
+  margin: 0 auto;
+  padding: 37px 0;
+
+  @include desktop {
+    padding: 16px 18px 17px 17px;
+    @include decor-line;
+    margin: 0;
+  }
+}
+
+.fb {
+  display: block;
+  margin: 0 auto;
+  padding: 29px 0;
+
+  @include desktop {
+    padding: 15px 20px 14px;
+    @include decor-line;
+    margin: 0;
+  }
+}
+
+.inst {
+  display: block;
+  margin: 0 auto;
+  padding: 32px 0;
+
+  @include desktop {
+    padding: 15px 15px 16px 16px;
+    @include decor-line;
+    margin: 0;
+  }
+}
+
+.copyright {
+  padding: 35px 0 0;
+  text-align: center;
+
+  @include tablet {
+    width: 25%;
+  }
+
+  @include desktop {
+    padding: 0;
+    width: 160px;
+  }
+}
+
+.copyright__text {
+  padding-bottom: 15px;
+}
+
+.copyright__link {
+  font-weight: bold;
+  padding: 18px;
+  @include decor-line;
+  display: block;
+}
