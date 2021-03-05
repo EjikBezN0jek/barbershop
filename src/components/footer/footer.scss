@@ -3,6 +3,7 @@
 
 
 .footer {
+  background: $dark-bg;
 
   &:before {
     content: "";
@@ -15,6 +16,7 @@
   }
 
   @include tablet {
+
     &:before {
       display: none;
     }
@@ -22,13 +24,12 @@
 }
 
 .footer__container {
-  background: $dark-bg;
   padding-bottom: 24px;
 
   @include tablet {
     @include flex;
     flex-wrap: wrap;
-    padding-bottom: 60px;
+    padding: 0 0 60px;
   }
 
   @include desktop {

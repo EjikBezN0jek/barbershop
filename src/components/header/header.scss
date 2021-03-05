@@ -3,11 +3,11 @@
 
 .header {
   position: relative;
-
+  background: $dark-bg;
 
   @include tablet {
     background: url("../../img/back-tablet.png") center center no-repeat;
-    height: 469px;
+    flex: 0 0 469px;
 
     &:before {
      content: '';
@@ -22,16 +22,14 @@
 
   @include desktop {
     background: url("../../img/back-desktop.png")center center no-repeat;
-    height: 720px;
+    flex: 0 0 720px;
   }
 }
 
 .header__container {
   padding: 0;
-  background: $dark-bg;
 
   @include tablet {
-    background: none;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -44,6 +42,7 @@
 
   @include tablet {
     padding-top: 38px;
+    padding-bottom: 73px;
   }
 
   @include desktop {

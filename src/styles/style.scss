@@ -44,12 +44,12 @@ p {
   padding: 0 20px;
 
   @include tablet {
-    max-width: 768px;
+    max-width: 640px;
     padding: 0 30px;
   }
 
   @include desktop {
-    max-width: 1250px;
+    max-width: 960px;
     padding: 0 15px;
   }
 }

@@ -1,0 +1,216 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+
+.stats {
+  position: relative;
+  background: $dark-bg;
+
+  @include tablet {
+    background: linear-gradient( transparent 0, transparent 184px, $dark-bg 184px);
+  }
+
+  @include desktop {
+    background: linear-gradient( transparent 0, transparent 154px, $dark-bg 154px);
+  }
+}
+
+.stats__container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    margin-top: -184px;
+  }
+
+  @include desktop {
+    margin-top: -154px;
+    flex-direction: row;
+  }
+}
+
+.stats__header {
+  background: white;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+
+  @include tablet {
+    @include flex;
+    text-align: left;
+    flex-wrap: wrap;
+    padding: 29px 40px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 42px;
+      left: -22px;
+      width: 22px;
+      height: 23px;
+      background: linear-gradient(to top right, transparent 50%, white 50%);
+    }
+  }
+
+  @include desktop {
+    width: 320px;
+    padding: 31px 40px;
+  }
+
+}
+
+.stats__title {
+  font-size: 30px;
+  @include title;
+
+  @include tablet {
+    font-size: 40px;
+    text-transform: none;
+    width: 206px;
+  }
+}
+
+.stats__notice {
+  display: none;
+  font-size: 20px;
+  color: rgba(78, 78, 78, 0.5);
+  text-align: center;
+  margin-bottom: -40px;
+
+  &--mobile {
+    display: block;
+  }
+
+  @include tablet {
+    display: block;
+    margin-bottom: 0;
+    text-align: left;
+    padding: 25px 0 0;
+    background: white;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    width: 320px;
+  }
+}
+
+
+.stats__subtitle {
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 27px;
+
+  @include tablet {
+    padding-top: 0;
+    width: 206px;
+    margin-right: 48px;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+  }
+}
+
+.stats__table {
+  padding:  0  0 20px;
+
+  @include tablet {
+    padding-top: 0;
+    @include flex;
+    flex-wrap: wrap;
+  }
+}
+
+.stats__item {
+  padding: 23px 20px;
+  color: white;
+  @include flex;
+
+  @include tablet {
+    flex-wrap: wrap;
+    padding: 32px 33px;
+  }
+
+  @include desktop {
+    padding: 26px 32px;
+  }
+}
+
+.value {
+  @include title;
+  font-size: 40px;
+
+  @include tablet {
+    font-size: 72px;
+    width: 100%;
+  }
+
+  span {
+    padding-left: 10px;
+    font-size: 20px;
+    vertical-align: top;
+
+    @include tablet {
+      font-size: 36px;
+    }
+  }
+}
+
+
+
+.description {
+  text-align: right;
+
+ @include tablet {
+   font-size: 20px;
+   padding-top: 20px;
+
+   br {
+     display: none;
+   }
+ }
+
+  @include desktop {
+    padding-top: 10px;
+  }
+}
+
+.first-row {
+  background: $main-color;
+
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.second-row {
+  background: $light-main-color;
+
+  @include tablet {
+    width: 50%;
+  }
+}
+
+.third-row {
+  background: $main-color;
+
+  @include tablet {
+    background: $light-main-color;
+    width: 50%;
+  }
+}
+
+.fourth-row {
+  background: $light-main-color;
+
+  @include tablet {
+    background: $main-color;
+    width: 50%;
+  }
+}

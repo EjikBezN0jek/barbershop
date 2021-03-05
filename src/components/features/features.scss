@@ -1,0 +1,70 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.features {
+  background: $dark-bg;
+}
+
+.features__container {
+  padding: 82px 40px 0;
+  text-align: center;
+}
+
+.features__item {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+
+.features__icon {
+  height: 90px;
+}
+
+.features__icon--first {
+  background: url("../../icons/advantage-1-illustration.png") center center / contain no-repeat;
+}
+
+.features__icon--second {
+  background: url("../../icons/advantage-2-illustration.png") center center / contain no-repeat;
+}
+
+.features__icon--third {
+  background: url("../../icons/advantage-3-illustration.png") center center / contain no-repeat;
+}
+
+
+.features__title {
+  @include title;
+  font-size: 30px;
+  color: white;
+  padding-top: 34px;
+}
+
+.features__description {
+  color: $light-color;
+  font-size: 20px;
+  line-height: 27px;
+  padding-top: 22px;
+}
+
+.dots {
+  padding-top: 30px;
+  @include flex;
+  width: 76px;
+  margin: 0 auto;
+}
+
+.dots__item {
+  border: 1px solid white;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  cursor: pointer;
+
+  &--active {
+    background: white;
+  }
+}
