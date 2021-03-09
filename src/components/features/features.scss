@@ -2,12 +2,24 @@
 @import "../../styles/variables";
 
 .features {
-  background: $dark-bg;
+  @include tablet {
+    background: $dark-bg;
+  }
 }
 
+
 .features__container {
-  padding: 82px 40px 0;
-  text-align: center;
+  background: $dark-bg;
+  padding: 82px 30px 47px;
+
+  @include tablet {
+    padding: 46px 30px 92px;
+  }
+
+  @include desktop {
+    @include flex;
+    padding: 80px 30px 110px;
+  }
 }
 
 .features__item {
@@ -16,11 +28,45 @@
   &--active {
     display: block;
   }
+
+  @include tablet {
+    @include flex;
+    padding-bottom: 37px;
+
+    &:not(:first-child) {
+      padding-top: 43px;
+      border-top: 1px solid $decor-line-color;
+    }
+  }
+
+  @include desktop {
+    display: block;
+    padding: 0 35px;
+
+
+
+    &:not(:first-child) {
+      padding-top: 0;
+      border-top: none;
+      border-left: 1px solid $decor-line-color;
+    }
+  }
 }
 
 
 .features__icon {
   height: 90px;
+
+ @include tablet {
+   flex-shrink: 0;
+   width: 95px;
+   margin-right: 33px;
+ }
+
+  @include desktop {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .features__icon--first {
@@ -35,12 +81,25 @@
   background: url("../../icons/advantage-3-illustration.png") center center / contain no-repeat;
 }
 
+.features__text {
+  padding-top: 34px;
+  text-align: center;
+
+  @include tablet {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  @include desktop {
+    padding-top: 34px;
+    text-align: center;
+  }
+}
 
 .features__title {
   @include title;
   font-size: 30px;
   color: white;
-  padding-top: 34px;
 }
 
 .features__description {
@@ -55,6 +114,10 @@
   @include flex;
   width: 76px;
   margin: 0 auto;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .dots__item {

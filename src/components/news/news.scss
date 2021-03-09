@@ -1,0 +1,150 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.news {
+
+  &:before {
+    content: "";
+    display: block;
+    background: url("../../icons/section-corner--primary-color.svg")0/100% 100% no-repeat;
+    width: 100%;
+    height: 34px;
+    max-width: 320px;
+    margin: -34px auto 0;
+  }
+
+  @include tablet {
+
+    &:before {
+      height: 68px;
+      max-width: 1200px;
+      margin: -68px auto 0;
+    }
+  }
+}
+
+.news__container {
+  padding: 37px 20px 28px;
+  background: $light-color;
+  border-bottom: 1px solid $light-decor-line-color;
+
+  @include tablet {
+    padding: 51px 0 42px;
+    @include flex;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    padding: 63px 0 46px;
+  }
+}
+
+.news__title {
+  @include title;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+
+  @include tablet {
+    text-align: left;
+    font-size: 40px;
+  }
+}
+
+
+.news__block {
+  padding-top: 35px;
+
+  @include tablet {
+    padding-top: 67px;
+    @include flex;
+    align-items: flex-start;
+    order: 1;
+  }
+}
+
+.news__item {
+  @include flex;
+  align-items: flex-start;
+
+  &--hidden{
+    display: none;
+  }
+
+
+  &:not(:first-child){
+    padding-top: 27px;
+    border-top: 1px solid $light-decor-line-color;
+  }
+
+  &:first-child {
+    padding-bottom: 20px;
+  }
+
+  @include tablet {
+    width: 50%;
+
+    &:not(:first-child){
+      padding-top: 0;
+      border-top: none;
+    }
+
+    &:not(:last-child){
+      padding-bottom: 0;
+      margin-right: 40px;
+    }
+  }
+
+  @include desktop {
+
+    &--hidden {
+      display: flex;
+    }
+  }
+}
+
+
+.news__data {
+  background: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  position: relative;
+  padding: 5px 5px 0 5px;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-top: 10px solid black;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+}
+
+.news__day {
+  @include title;
+  font-size: 30px;
+}
+
+.news__month {
+  font-size: 16px;
+}
+
+.news__text {
+  line-height: 27px;
+}
+
+
+.news__button {
+  margin-top: 26px;
+
+  @include tablet {
+    margin-top: 0;
+    width: 161px;
+  }
+}

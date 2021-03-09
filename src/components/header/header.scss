@@ -3,10 +3,12 @@
 
 .header {
   position: relative;
-  background: $dark-bg;
 
   @include tablet {
-    background: url("../../img/back-tablet.png") center center no-repeat;
+    background-color: $dark-bg;
+    background-image: url("../../img/back-tablet.png");
+    background-position: center center;
+    background-repeat: no-repeat;
     flex: 0 0 469px;
 
     &:before {
@@ -28,8 +30,10 @@
 
 .header__container {
   padding: 0;
+  background: $dark-bg;
 
   @include tablet {
+    background: none;
     display: flex;
     flex-direction: column-reverse;
   }

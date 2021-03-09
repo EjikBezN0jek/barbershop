@@ -1,3 +1,5 @@
-mixin button(text)
-  .trest
+mixin button(text, isLink)
+  if isLink
+    a.button&attributes(attributes)= text
+  else
     button.button&attributes(attributes)= text

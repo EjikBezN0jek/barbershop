@@ -1,0 +1,27 @@
+include ../button/button
+
+
+mixin news()
+  .news
+    .container.news__container
+      p.news__title Новости и акции
+      .news__block
+        .news__item
+          .news__data
+            p.news__day 29
+            p.news__month сент
+          p.news__text Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+        .news__item
+          .news__data
+            p.news__day 19
+            p.news__month сент
+          p.news__text В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
+        .news__item.news__item--hidden
+          .news__data
+            p.news__day 9
+            p.news__month сент
+          p.news__text Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
+      +button("Показать все", true)(href='#').button--link.news__button
+
+
+

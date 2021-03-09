@@ -4,7 +4,6 @@
 
 .stats {
   position: relative;
-  background: $dark-bg;
 
   @include tablet {
     background: linear-gradient( transparent 0, transparent 184px, $dark-bg 184px);
@@ -16,6 +15,7 @@
 }
 
 .stats__container {
+  background: $dark-bg;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@
   padding:  0  0 20px;
 
   @include tablet {
-    padding-top: 0;
+    padding: 0;
     @include flex;
     flex-wrap: wrap;
   }

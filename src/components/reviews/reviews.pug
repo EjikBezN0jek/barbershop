@@ -1,0 +1,18 @@
+include ../button/button
+
+mixin reviews()
+  .reviews
+    .container.reviews__container
+      p.reviews__title Отзывы о нас
+      .reviews__item.reviews__item--active
+        picture.reviews__icon
+          source(media='(min-width: 1200px)', srcset='img/travis-img-desktop.png')
+          source(media='(min-width: 768px)', srcset='img/travis-img-tablet.png')
+          img(src='img/travis-img.png', alt='travis')
+        .reviews__info
+          p.reviews__author Трэвис Баркер
+          p.reviews__text Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+      .reviews__dots.dots
+        .dots__item.dots__item--active
+        .dots__item
+        .dots__item

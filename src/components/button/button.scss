@@ -4,12 +4,24 @@
   border: none;
   text-decoration: none;
   margin: 0;
-  padding: 0;
+  padding: 18px 30px;
+  width: 100%;
   line-height: 1;
+  @include title;
+  background: $secondary-dark-color;
+  text-align: center;
+  color: white;
 
   &:active,
   &:focus {
     outline: none;
   }
 
+}
+
+.button--link {
+  display: block;
+  color: black;
+  background: none;
+  border: 1px solid $light-decor-line-color;
 }
